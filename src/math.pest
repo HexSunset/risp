@@ -1,6 +1,6 @@
 Number		= @{ "-"? ~ ASCII_DIGIT+ }
 Operator	= { "-" | "+" | "*" | "/" }
-Expression	= { open_paren ~ Operator ~ (Number | Expression)+ ~ close_paren}
+Expression	= { open_paren ~ Operator ~ (Number | Expression){2} ~ close_paren}
 WHITESPACE	= _{ " " | "\t" | "\n" }
 
 open_paren	= { "(" }

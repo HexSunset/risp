@@ -12,7 +12,7 @@ pub fn eval_math(pair: Pair<Rule>) -> i64 {
 	let _open_paren = children.next();
 	
 	let operator = children.next().unwrap().as_str();
-	// TODO: we're currently allowing multiple operands to parse, but not handling them.
+
 	let operand_a = eval_math(children.next().unwrap());
 	let operand_b = eval_math(children.next().unwrap());
 	
